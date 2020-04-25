@@ -1,3 +1,12 @@
+
+
+
+Build tables, update conn in config, compile solution, publish and point browser to:
+
+https://localhost:44377/Products/Index
+
+Tables:
+
 USE [CRUDDB]  --update to be your database
 
 GO

@@ -1,0 +1,24 @@
+﻿@model System.Data.DataTable
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<table class="table table-bordered table-striped ">
+    <tr>
+        <th>Product Desc</th>
+        <th></th>
+        <th></th>
+    </tr>
+    @for (int i=0; i< Model.Rows.Count;i ++)
+    { 
+<tr>
+    <td>@Model.Rows[i][1] </td>
+    <td><a href="@Url.Action("Edit", "Products", new { @id = Model.Rows[i][0] })">Edit</a></td>
+    <td><a href="@Url.Action("Delete", "Products", new { @id = Model.Rows[i][0] })">Delete</a></td>
+</tr>
+    }
+
+</table>
+
+<a href="@Url.Action( "Create", "Products")"> Add Products</a>
